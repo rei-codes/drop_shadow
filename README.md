@@ -2,8 +2,7 @@
 
 Drop shadow effect for any widget in flutter
 
-![screenshot](screenshot.png "Screenshot")
-
+[![screenshot](https://github.com/iisprey/drop_shadow/blob/main/screenshot.png?raw=true)](https://github.com/iisprey/drop_shadow/blob/main/screenshot.png?raw=true)
 
 ## <b>Parameters</b>
    ```dart
