@@ -4,6 +4,22 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
+/// Widget child; // required
+///
+///  Blur size of the shadow
+///  double blurRadius; // default: 10.0
+///
+///  BorderRadius to the image and the shadow
+///  double borderRadius; // default: 0.0
+///
+///  Position of the shadow
+///  Offset offset; // default: Offset(0.0, 8.0)
+///
+///  Give opacity to the shadow
+///  double opacity; // default: 1.0
+///
+///  size of the shadow
+///  double spread; // default: 1.0
 class DropShadow extends StatelessWidget {
   final Widget child;
   final double blurRadius;
@@ -34,30 +50,44 @@ class DropShadow extends StatelessWidget {
     top = (offset.dy.abs() + (blurRadius * 2)) * spread;
     bottom = (offset.dy + (blurRadius * 2)) * spread;
 
+    /// [ClipRRect] to isolate [BackDropFilter] from other widgets
     return ClipRRect(
       child: Padding(
+        /// Calculate Shadow's effect field
         padding: EdgeInsets.fromLTRB(left, top, right, bottom),
         child: Stack(
           children: [
+            /// Arrange shadow position
             Transform.translate(
               offset: offset,
+
+              /// Apply [BorderRadius] to the shadow
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(borderRadius),
+
+                /// Apply [Opacity] to the shadow
                 child: Opacity(
                   opacity: opacity,
                   child: child,
                 ),
               ),
             ),
+
+            /// Apply filter the whole [Stack] space
             Positioned.fill(
+              /// Apply blur effect to the layer
               child: BackdropFilter(
                 filter: ImageFilter.blur(
                   sigmaX: blurRadius,
                   sigmaY: blurRadius,
                 ),
+
+                /// Filter effect field
                 child: Container(color: Colors.transparent),
               ),
             ),
+
+            /// [Widget] itself with given [BorderRadius]
             ClipRRect(
               borderRadius: BorderRadius.circular(borderRadius),
               child: child,

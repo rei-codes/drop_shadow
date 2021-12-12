@@ -1,10 +1,10 @@
 name: drop_shadow
-description: Drop shadow effect for any widget in Flutter
-version: 0.0.1+2
+description: It's a drop shadow effect not only for images but also for any widget in Flutter.
+version: 0.0.1+4
 homepage: https://github.com/iisprey/drop_shadow
 
 environment:
-  sdk: ">=2.15.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
   flutter: ">=1.17.0"
 
 dependencies:
@@ -13,5 +13,3 @@ dependencies:
 
 dev_dependencies:
   flutter_lints: ^1.0.0
-
-flutter:
