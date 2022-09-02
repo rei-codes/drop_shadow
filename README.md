@@ -2,6 +2,16 @@
 
 Drop shadow effect for any widget in flutter
 
+![Cover](cover.jpeg)
+
+## Logic behind the package
+![Logic](logic.jpeg)
+
+For Further information check out [the article](https://itnext.io/drop-shadow-effect-on-any-widget-in-flutter-c6cec51329dd)
+
+---
+
+## Screenshot 
 [![screenshot](https://github.com/iisprey/drop_shadow/blob/main/screenshot.png?raw=true)](https://github.com/iisprey/drop_shadow/blob/main/screenshot.png?raw=true)
 
 ## <b>Parameters</b>
