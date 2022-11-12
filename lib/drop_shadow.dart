@@ -4,46 +4,43 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-/// Widget child; // required
-///
-///  Blur size of the shadow
-///  double blurRadius; // default: 10.0
-///
-///  BorderRadius to the image and the shadow
-///  double borderRadius; // default: 0.0
-///
-///  Position of the shadow
-///  Offset offset; // default: Offset(0.0, 8.0)
-///
-///  Give opacity to the shadow
-///  double opacity; // default: 1.0
-///
-///  size of the shadow
-///  double spread; // default: 1.0
+/// Help to create drop shadow effect using [BackdropFilter]
 class DropShadow extends StatelessWidget {
-  final Widget child;
-  final double blurRadius;
-  final double borderRadius;
-  final Offset offset;
-  final double opacity;
-  final double spread;
-
+  /// Create DropShadow for any kind of widget with default values
   const DropShadow({
-    Key? key,
     required this.child,
     this.blurRadius = 10.0,
     this.borderRadius = 0.0,
-    this.offset = const Offset(0.0, 8.0),
+    this.offset = const Offset(0, 8),
     this.opacity = 1.0,
     this.spread = 1.0,
-  }) : super(key: key);
+    super.key,
+  });
+
+  /// Your widget comes here :)
+  final Widget child;
+
+  /// Blur radius of the shadow
+  final double blurRadius;
+
+  /// BorderRadius to the image and the shadow
+  final double borderRadius;
+
+  /// Position of the shadow
+  final Offset offset;
+
+  /// Opacity of the shadow
+  final double opacity;
+
+  /// Size of the shadow
+  final double spread;
 
   @override
   Widget build(BuildContext context) {
-    double left = 0;
-    double right = 0;
-    double top = 0;
-    double bottom = 0;
+    var left = 0.0;
+    var right = 0.0;
+    var top = 0.0;
+    var bottom = 0.0;
 
     left = (offset.dx.abs() + (blurRadius * 2)) * spread;
     right = (offset.dx + (blurRadius * 2)) * spread;
@@ -83,7 +80,7 @@ class DropShadow extends StatelessWidget {
                 ),
 
                 /// Filter effect field
-                child: Container(color: Colors.transparent),
+                child: const ColoredBox(color: Colors.transparent),
               ),
             ),
 
