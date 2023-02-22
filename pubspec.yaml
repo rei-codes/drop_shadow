@@ -1,7 +1,8 @@
 name: drop_shadow
 description: Add drop shadow effect for any widgets in flutter
-version: 0.0.2
 repository: https://github.com/iisprey/drop_shadow
+issue_tracker: https://github.com/rei-codes/drop_shadow/issues
+version: 0.1.0
 
 environment:
   sdk: '>=2.18.4 <3.0.0'
@@ -12,4 +13,8 @@ dependencies:
     sdk: flutter
 
 dev_dependencies:
-  very_good_analysis: ^3.1.0
+  very_good_analysis: ^4.0.0+1
+
+screenshots:
+  - description: 'Drop shadow example of the package'
+    path: images/screenshot.webp

@@ -1,3 +1,4 @@
+/// main library of the package
 library drop_shadow;
 
 import 'dart:ui';
@@ -69,6 +70,7 @@ class DropShadow extends StatelessWidget {
                 /// Apply [Opacity] to the shadow
                 child: Opacity(
                   opacity: opacity,
+                  // Apply custom shadow color
                   child: color == null
                       ? child
                       : ColorFiltered(
