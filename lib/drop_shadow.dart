@@ -74,7 +74,7 @@ class DropShadow extends StatelessWidget {
                       : ColorFiltered(
                           colorFilter: ColorFilter.mode(
                             color!,
-                            BlendMode.modulate,
+                            BlendMode.srcIn,
                           ),
                           child: child,
                         ),
