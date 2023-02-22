@@ -17,4 +17,4 @@ dev_dependencies:
 
 screenshots:
   - description: 'Drop shadow example of the package'
-    path: images/screenshot.webp
+    path: images/cover.webp
