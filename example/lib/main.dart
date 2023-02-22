@@ -51,6 +51,13 @@ class HomePage extends StatelessWidget {
                   style: TextStyle(fontSize: 35, color: Colors.orange),
                 ),
               ),
+              const DropShadow(
+                color: Colors.black,
+                child: Text(
+                  'Solid color drop shadow',
+                  style: TextStyle(fontSize: 35, color: Colors.orange),
+                ),
+              ),
             ],
           ),
         ),

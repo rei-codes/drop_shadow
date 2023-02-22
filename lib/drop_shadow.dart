@@ -14,6 +14,7 @@ class DropShadow extends StatelessWidget {
     this.offset = const Offset(0, 8),
     this.opacity = 1.0,
     this.spread = 1.0,
+    this.color,
     super.key,
   });
 
@@ -34,6 +35,9 @@ class DropShadow extends StatelessWidget {
 
   /// Size of the shadow
   final double spread;
+
+  /// Color of the shadow
+  final Color? color;
 
   @override
   Widget build(BuildContext context) {
@@ -65,7 +69,15 @@ class DropShadow extends StatelessWidget {
                 /// Apply [Opacity] to the shadow
                 child: Opacity(
                   opacity: opacity,
-                  child: child,
+                  child: color == null
+                      ? child
+                      : ColorFiltered(
+                          colorFilter: ColorFilter.mode(
+                            color!,
+                            BlendMode.srcIn,
+                          ),
+                          child: child,
+                        ),
                 ),
               ),
             ),
