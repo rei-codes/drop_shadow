@@ -1,5 +1,5 @@
 name: drop_shadow
-description: Add drop shadow effect for any widgets in flutter
+description: A new Flutter package for creating drop shadow of any widget with a lot of properties to make it look much good.
 repository: https://github.com/iisprey/drop_shadow
 issue_tracker: https://github.com/rei-codes/drop_shadow/issues
 version: 0.1.0
